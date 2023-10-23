@@ -1,7 +1,7 @@
 add_executable(app main.cpp ../libfts/libfts.cpp)
 
 target_include_directories(app PUBLIC cxxopts)
-target_link_libraries(app PRIVATE cxxopts)
+target_link_libraries(app PRIVATE cxxopts libfts)
 
 set_target_properties(
   app
