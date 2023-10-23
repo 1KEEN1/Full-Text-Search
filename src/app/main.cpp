@@ -1,7 +1,7 @@
 #include <cxxopts.hpp>
 #include <iostream>
 
-#include "../libfts/libfts.hpp"
+#include <libfts/libfts.hpp>
 
 int main(int argc, char **argv) {
   cxxopts::Options options("sum");
