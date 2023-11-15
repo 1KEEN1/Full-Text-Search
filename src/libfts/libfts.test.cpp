@@ -1,5 +1,5 @@
-#include "../libfts/libfts.hpp"
 #include <gtest/gtest.h>
+#include <libfts/libfts.hpp>
 
 TEST(math, sum) {
   double first_number = 2.5, second_number = 1.3, expected_result = 3.8;
