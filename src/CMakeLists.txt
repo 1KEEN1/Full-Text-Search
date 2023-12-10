@@ -1,3 +1,4 @@
 add_subdirectory(libfts)
 add_subdirectory(libfts_app)
 add_subdirectory(libparser)
+add_subdirectory(libindexer)
