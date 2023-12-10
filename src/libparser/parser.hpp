@@ -1,5 +1,9 @@
 #pragma once
+
+#include <algorithm>
+#include <cctype>
 #include <iostream>
+#include <pugixml.hpp>
 #include <vector>
 
 namespace common {
@@ -20,7 +24,6 @@ private:
   std::string ConfigPath;
   std::vector<std::string> stopWords;
   std::vector<std::string> textWords;
-  std::vector<std::pair<std::string, int>> nGrams;
   int min_ngram_length = 0;
   int max_ngram_length = 0;
 
@@ -31,7 +34,6 @@ public:
   inline int getMinNgram() { return min_ngram_length; }
   inline int getMaxNgram() { return max_ngram_length; }
   inline std::vector<std::string> getTextWords() { return textWords; }
-  inline std::vector<std::pair<std::string, int>> getNGrams() { return nGrams; }
   std::vector<std::pair<std::string, int>> parse(std::string p_text) override;
 };
 } // namespace common

@@ -1,10 +1,4 @@
-#include <algorithm>
-#include <cctype>
-#include <iostream>
-#include <vector>
-
 #include <libparser/parser.hpp>
-#include <pugixml.hpp>
 
 namespace common {
 
@@ -72,6 +66,7 @@ common::NgramParser::parse(std::string p_text) {
 
   // Make ngrams.
   int counter = 0;
+  std::vector<std::pair<std::string, int>> nGrams;
   for (const std::string &word : textWords) {
     for (int i = min_ngram_length;
          i <= std::min(max_ngram_length, static_cast<int>(word.length()));
@@ -81,6 +76,8 @@ common::NgramParser::parse(std::string p_text) {
     }
     counter++;
   }
+
+  textWords.clear();
 
   return nGrams;
 }

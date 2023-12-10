@@ -18,6 +18,7 @@ enable_testing()
 include(GoogleTest)
 
 add_executable(libparser_test parser.test.cpp)
+
 target_link_libraries(
    libparser_test
    ${target_name}
